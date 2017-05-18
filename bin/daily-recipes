@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
-DailyRecipe::CLI.new.call
+require './lib/daily-recipes'
+DailyRecipe.new.call

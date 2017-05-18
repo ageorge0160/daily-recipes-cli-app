@@ -1,7 +1,2 @@
-require "daily/recipes/version"
-
-module DailyRecipe
-  module Recipes
-    # Your code goes here...
-  end
-end
+require_relative "./daily-recipes/version"
+require_relative "./daily-recipes/cli"

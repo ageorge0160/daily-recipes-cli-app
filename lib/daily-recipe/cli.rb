@@ -1,3 +1,0 @@
-class DailyRecipe::CLI
-
-end
