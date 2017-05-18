@@ -11,12 +11,15 @@ class DailyRecipe
     puts "On the menu today:"
 
     @recipe = Recipe.today
+    @recipe.each_with_index(1) do |recipe, i|
+      puts "#{i}. #{recipe.name} - #{recipe.description}"
+    end
   end
 
   def show_recipe_card
     input = nil
     while input != "exit"
-      puts "Which recipe card would you like?"
+      puts "Which recipe card would you like? Input 'list meals' to see meal list or 'exit'"
       input = gets.strip.downcase
       case input
       when "1"

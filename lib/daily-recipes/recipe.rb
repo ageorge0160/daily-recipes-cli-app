@@ -9,7 +9,7 @@ class Recipe
   end
 
   def self.today
-    #return many instances of Recipe
+    #scrape here
 
     recipe_1 = self.new
     recipe_1.name = "Johnsonville Italian Sausage Lasagna"
@@ -37,6 +37,7 @@ class Recipe
     puts "2. #{recipe_2.name} - #{recipe_2.description}"
     puts ""
     puts "3. #{recipe_3.name} - #{recipe_3.description}"
+    puts ""
 
   end
 
