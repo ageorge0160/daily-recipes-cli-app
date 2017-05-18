@@ -1,6 +1,6 @@
 require "daily/recipes/version"
 
-module Daily
+module DailyRecipe
   module Recipes
     # Your code goes here...
   end
