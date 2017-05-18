@@ -3,15 +3,14 @@
 class DailyRecipe
 
   def call
-    puts "Today's Meals:"
     list_daily_meals
     show_recipe_card
-
   end
 
   def list_daily_meals
-    puts "Meal of the day: PB & J - Sandwich made of peanut butter and jelly"
-    puts "Today's Staff Picks: 1. French Toast 2. Pancakes"
+    puts "On the menu today:"
+
+    @recipe = Recipe.today
   end
 
   def show_recipe_card
@@ -28,8 +27,10 @@ class DailyRecipe
         puts "Recipe Card for Panckaes"
       when "list meals"
         list_daily_meals
+      when "exit"
+        puts "Goodbye"
       else
-        puts "Please try y/n again"
+        puts "Please try again"
       end
     end
   end
