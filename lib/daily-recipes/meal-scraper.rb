@@ -7,6 +7,7 @@ class MealScraper
   end
 
   def scrape_recipe
-    self.get_meal_page.css()
+    #scrape recipe card
+
   end
 end

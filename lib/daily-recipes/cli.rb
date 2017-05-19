@@ -10,10 +10,13 @@ class DailyRecipe
   def list_daily_meals
     puts "On the menu today:"
 
-    @recipe = Recipe.today
-    @recipe.each_with_index(1) do |recipe, i|
-      puts "#{i}. #{recipe.name} - #{recipe.description}"
-    end
+
+    today = HomeScraper.new
+    recipe_array = today.scrape_tiles 
+    # @recipe = Recipe.today
+    # @recipe.each_with_index(1) do |recipe, i|
+    #   puts "#{i}. #{recipe.name} - #{recipe.description}"
+    # end
   end
 
   def show_recipe_card
