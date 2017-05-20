@@ -2,23 +2,21 @@
 # require 'nokogiri'
 class HomeScraper
 
-  attr_accessor :name, :description, :url, :cardslot
-
   def initialize
     @doc = Nokogiri::HTML(open("https://recipes.tamouse.org/full-index.html"))
-    @name = name
-    @description = description
-    @url = url
-    @cardslot = cardslot
   end
 
   def scrape_tiles
-    recipe_today = []
+    @recipes = []
     @doc.css(".col-md-4").each do |tile|
-      recipe_today << {:name => tile.css("h3 a").text.strip , :description => tile.css(".post-excerpt p").text, :url => tile.css("h3 a").attribute("href").value }
+      @recipes << {:name => tile.css("h3 a").text.strip , :description => tile.css(".post-excerpt p").text, :url => "https://recipes.tamouse.org#{tile.css("h3 a").attribute("href").value }"}
     end
-    binding.pry
+    @recipes
   end
 
+  def make_recipes
+    @recipes.each do |recipe|
+      Recipe.new_from_hash(recipe)
+    end
+  end
 end
-#  "http://allrecipes.com" +
