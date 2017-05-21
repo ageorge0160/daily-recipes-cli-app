@@ -1,5 +1,4 @@
-# require 'open-uri'
-# require 'nokogiri'
+
 class HomeScraper
 
   def initialize
@@ -14,9 +13,10 @@ class HomeScraper
     @recipes
   end
 
-  def make_recipes
-    @recipes.each do |recipe|
+  def self.make_recipes
+    self.recipes.each do |recipe|
       Recipe.new_from_hash(recipe)
     end
   end
+
 end

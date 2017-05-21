@@ -3,42 +3,29 @@
 class DailyRecipe
 
   def call
-    list_daily_meals
+    list_daily_meal
     show_recipe_card
-    different_meal
   end
 
-  def list_daily_meals
+  def list_daily_meal
     puts "On the menu today:"
-
-
-    today = HomeScraper.new.scrape_tiles.make_recipes
-    today
-
-    # binding.pry
+    puts "Alfredo Sauce - A creamy, cheesy to go over pasta or other things."
   end
 
   def show_recipe_card
+    puts "Select 'recipe card' or 'exit'"
     input = nil
     while input != "exit"
-      puts "Which recipe card would you like? Input 'list meals' to see meal list or 'exit'"
       input = gets.strip.downcase
       case input
-      when "y"
-        puts "Recipe of the day:"
-      when "n"
-        puts "Would you like a different meal?"
+      when "recipe card"
+        puts "Recipe of the day: Alfredo Sauce"
       when "exit"
         puts "Goodbye"
       else
         puts "Please try again"
       end
     end
-  end
-
-  def different_meal
-
-    #reload
   end
 
 end

@@ -10,18 +10,18 @@ class Recipe
   end
 
   def self.new_from_hash(recipe)
-    recipe.name = @name
-    recipe.description = @description
-    recipe.url = @url
-    @@all << recipe
+    # recipe.name = @name
+    # recipe.description = @description
+    # recipe.url = @url
+    # @@all << recipe
   end
 
   def self.today
-    todays_meal = @@all.sample
-    binding.pry
-    recipe_1.name = "Johnsonville Italian Sausage Lasagna"
-    recipe_1.description = "Johnsonville Italian Sausages make it simple to enjoy authentic Italian flavor. This classic lasagna dish is made so much easier when you've got Johnsonville backing you up. The flavor of the Italian sausages will help to make this recipe your new lasagna favorite!"
-    recipe_1.url = "http://allrecipes.com/recipe/219946/johnsonville-italian-sausage-lasagna/?internalSource=rotd&referringId=1&referringContentType=recipe%20hub&clickId=cardslot%201"
+    # todays_meal = @@all.sample
+
+    recipe_1.name = "Alfredo"
+    recipe_1.description = "Alfredo sauce recipe card"
+    recipe_1.url = "https://recipes.tamouse.org/sauces/2011/09/07/alfredo-sauce.html"
 
     puts ""
     puts "-------------- Meal of the day: --------------"

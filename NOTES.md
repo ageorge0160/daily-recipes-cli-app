@@ -9,19 +9,16 @@ How to build a CLI Gem
 7. Discover objects
 8. Program
 
-      A command line interface for a daily recipe starting with All recipes
+      A command line interface for a daily recipe starting with Tamouse's blog
 
       Show today's recipe.
       1. Meal name - small description
-      2. staff pick meal - small description
-      3. staff pick meal - small description
 
-      Which recipe card would you like?
+      Select 'recipe card' or 'exit'
+        recipe card
 
-    1
+      Full recipe card
 
-    Full recipe card
+      exit
 
-    exit
-
-    say goodbye
+      say goodbye
