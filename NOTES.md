@@ -12,7 +12,7 @@ How to build a CLI Gem
       A command line interface for a daily recipe starting with Tamouse's blog
 
       Show today's recipe.
-      1. Meal name - small description
+      Meal name - small description
 
       Select 'recipe card' or 'exit'
         recipe card
