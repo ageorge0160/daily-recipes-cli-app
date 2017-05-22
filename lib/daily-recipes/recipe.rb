@@ -29,5 +29,7 @@ class Recipe
     self.create
     @@recipes.sample
   end
-#
+
+  #scrape from todays meal url to return recipde card
+
 end

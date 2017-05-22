@@ -17,7 +17,14 @@ How to build a CLI Gem
       Select 'recipe card' or 'exit'
         recipe card
 
-      Full recipe card
+      Full recipe card:
+      Title of Meal(scrape)
+      Ingredients
+      (scrape all list items)
+      Directions
+      (scrape all list items) 
+
+
 
       exit
 
