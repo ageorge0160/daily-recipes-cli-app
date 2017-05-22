@@ -3,29 +3,36 @@ class Recipe
   attr_accessor :name, :description, :url
 
   @@all = []
-  def initialize
+  def initialize(name = nil, description = nil, url = nil)
     @name = name
     @description = description
     @url = url
   end
 
-  def self.new_from_hash(recipe)
-    # recipe.name = @name
-    # recipe.description = @description
-    # recipe.url = @url
-    # @@all << recipe
+
+  def scrape_tiles
+    @doc = Nokogiri::HTML(open("https://recipes.tamouse.org/full-index.html"))
+    @recipes = []
+    @doc.css(".col-md-4").each do |tile|
+      @recipes << {:name => tile.css("h3 a").text.strip , :description => tile.css(".post-excerpt p").text, :url => "https://recipes.tamouse.org#{tile.css("h3 a").attribute("href").value }"}
+    end
+    @recipes
+  end
+
+  def new_from_hash(recipe)
+    self.new(recipe.name, recipe.description, recipe.url)
+  end
+
+  def make_recipes
+    recipes_array = scrape_tiles
+    recipes_array.each do |recipe|
+      self.new_from_hash(recipe)
+      @@all << self
+    end
   end
 
   def self.today
-    # todays_meal = @@all.sample
-
-    recipe_1.name = "Alfredo"
-    recipe_1.description = "Alfredo sauce recipe card"
-    recipe_1.url = "https://recipes.tamouse.org/sauces/2011/09/07/alfredo-sauce.html"
-
-    puts ""
-    puts "-------------- Meal of the day: --------------"
-    puts "1. #{recipe_1.name} - #{recipe_1.description}"
+    @@all.sample
   end
 
 end

@@ -1,15 +1,22 @@
-
-
 class DailyRecipe
 
+  def initialize
+  end
+
   def call
+    Recipe.new.today
+
     list_daily_meal
     show_recipe_card
   end
 
   def list_daily_meal
-    puts "On the menu today:"
-    puts "Alfredo Sauce - A creamy, cheesy to go over pasta or other things."
+
+    puts ""
+    puts "-------------- Meal of the day: --------------"
+    puts "1. #{todays_meal.name} - #{todays_meal.description}"
+    puts ""
+
   end
 
   def show_recipe_card
@@ -19,7 +26,7 @@ class DailyRecipe
       input = gets.strip.downcase
       case input
       when "recipe card"
-        puts "Recipe of the day: Alfredo Sauce"
+        todays_meal = Recipe.new.today
       when "exit"
         puts "Goodbye"
       else
