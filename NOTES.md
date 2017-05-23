@@ -31,4 +31,7 @@ How to build a CLI Gem
 
 Hello, I don't have a working mic but this is a 30 minute session of coding with me, Amanda.
 
-I have built an app to scrape a recipe site to create a daily recipe and deliver a recipe card if wanted. I will be working on the second level of scraping so a recipe card can be created.       
+I have built an app to scrape a recipe site to create a daily recipe and deliver a recipe card if wanted. I will be working on the second level of scraping so a recipe card can be created.  
+
+
+Time to call it a night. Thanks for watching. Sorry I couldn't narrate. Have a good one!     
