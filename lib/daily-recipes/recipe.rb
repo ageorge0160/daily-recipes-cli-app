@@ -30,5 +30,8 @@ class Recipe
     @@recipes.sample
   end
 
+  def recipe_card(url)
+    Card.new(url)
+  end
 
 end

@@ -24,7 +24,7 @@ class DailyRecipe
       input = gets.strip.downcase
       case input
       when "recipe card"
-        card = @todays_meal.recipe_card
+        card = @todays_meal.recipe_card(@todays_meal.url)
         puts "#{card.name}"
         puts "Ingredients:"
         card.ingredients.each {|ingredient| puts "-#{ingredient}"}

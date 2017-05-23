@@ -3,12 +3,13 @@
 class Card
   #scrape from todays meal url to return recipde card
 
-  def initialize(name = nil, ingredients = nil, directions = nil)
+  def initialize(url, name = nil, ingredients = nil, directions = nil)
     @name = name
     ingredients = []
     @ingredients = ingredients
     directions = []
     @directions = directions
+    @url = url
 
   end
 
