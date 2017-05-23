@@ -15,7 +15,6 @@ class DailyRecipe
     puts "#{@todays_meal.name}"
     puts "#{@todays_meal.description}"
     puts ""
-    # binding.pry
   end
 
   def show_recipe_card
@@ -25,7 +24,11 @@ class DailyRecipe
       input = gets.strip.downcase
       case input
       when "recipe card"
-        puts "card"
+        card = @todays_meal.recipe_card
+        puts "#{card.name}"
+        puts "Ingredients:"
+        card.ingredients.each {|ingredient| puts "-#{ingredient}"}
+        card.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
       when "exit"
         puts "Goodbye"
       else

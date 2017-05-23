@@ -30,6 +30,5 @@ class Recipe
     @@recipes.sample
   end
 
-  #scrape from todays meal url to return recipde card
 
 end

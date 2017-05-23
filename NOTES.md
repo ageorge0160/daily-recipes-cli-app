@@ -22,10 +22,13 @@ How to build a CLI Gem
       Ingredients
       (scrape all list items)
       Directions
-      (scrape all list items) 
-
-
+      (scrape all list items)
 
       exit
 
       say goodbye
+
+
+Hello, I don't have a working mic but this is a 30 minute session of coding with me, Amanda.
+
+I have built an app to scrape a recipe site to create a daily recipe and deliver a recipe card if wanted. I will be working on the second level of scraping so a recipe card can be created.       
