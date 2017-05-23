@@ -31,7 +31,7 @@ class Recipe
   end
 
   def recipe_card(url)
-    Card.new(url)
+    Card.create(url)
   end
 
 end

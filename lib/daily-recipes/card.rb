@@ -13,7 +13,7 @@ class Card
 
   end
 
-  def recipe_card
+  def self.create(url)
     doc = Nokogiri::HTML(open("https://recipes.tamouse.org/main-dishes/2011/07/07/balsamic-chicken.html"))
     #plugging in a sample url for now until the scraping is working
     card = self.new
