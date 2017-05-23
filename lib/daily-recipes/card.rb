@@ -3,6 +3,8 @@
 class Card
   #scrape from todays meal url to return recipde card
 
+  attr_accessor :name, :url, :ingredients, :directions
+
   def initialize(url, name = nil, ingredients = nil, directions = nil)
     @name = name
     ingredients = []
@@ -13,17 +15,13 @@ class Card
 
   end
 
-  def self.create_card(url)
+  def self.create(url)
     doc = Nokogiri::HTML(open("https://recipes.tamouse.org/main-dishes/2011/07/07/balsamic-chicken.html"))
     #plugging in a sample url for now until the scraping is working
     card = self.new
     card.name = doc.css(".page-header h2").text.strip
     card.ingredients = doc.css("ul li").each {|ingredient| ingredients << ingredient}
     card.directions = doc.css("ol li p").each {|step| directions << step}
-  end
-
-  def recipe_card(url)
-    self.create(url)
   end
 
 
