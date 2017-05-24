@@ -1,6 +1,6 @@
 class Recipe
 
-  attr_accessor :name, :description, :url
+  attr_accessor :name, :url
 
   @@recipes = []
 
@@ -13,13 +13,11 @@ class Recipe
 
   #scrape website and return array of recipes
   def self.create
-    doc = Nokogiri::HTML(open("https://recipes.tamouse.org/full-index.html"))
-    doc.css(".col-md-4").each do |tile|
+    doc = Nokogiri::HTML(open("http://pinchofyum.com/recipes"))
+    doc.css("article.post-summary").each do |tile|
       recipe = self.new
-      recipe.name = tile.css("h3 a").text.strip
-      recipe.description = tile.css(".post-excerpt p").text
-      recipe.url = "https://recipes.tamouse.org#{tile.css("h3 a").attribute("href").value }"
-      # @recipes << {:name => tile.css("h3 a").text.strip , :description => tile.css(".post-excerpt p").text, :url => "https://recipes.tamouse.org#{tile.css("h3 a").attribute("href").value }"}
+      recipe.name = tile.css(".caption").text.strip
+      recipe.url = tile.css(".block-link").attribute("href").value
       @@recipes << recipe
     end
     @@recipes
@@ -30,6 +28,6 @@ class Recipe
     @@recipes.sample
   end
 
-  
+
 
 end
