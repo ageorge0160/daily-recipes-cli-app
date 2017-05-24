@@ -14,12 +14,12 @@ class Card
 
   def self.create(url)
     doc = Nokogiri::HTML(open(url))
-    #plugging in a sample url for now until the scraping is working
     card = self.new
-    card.name = doc.css(".page-header h2").text.strip
+    card.name = "Recipe"#doc.css("header.tasty-recipes-entry-header h2 span").text.strip
     card.ingredients = doc.css("ul li").each {|ingredient| ingredients << ingredient}
     card.directions = doc.css("ol li p").each {|step| directions << step}
     binding.pry
   end
+
 
 end

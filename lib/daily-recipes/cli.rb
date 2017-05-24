@@ -31,11 +31,11 @@ class DailyRecipe
       input = gets.strip.downcase
       case input
       when "recipe card"
-        puts "#{@todays_card}"
+        puts "#{@todays_card.name}"
         puts "Ingredients:"
-        @todays_card #.ingredients.each {|ingredient| puts "-#{ingredient}"}
+        @todays_card.ingredients.each {|ingredient| puts "-#{ingredient}"}
         puts "Directions:"
-        @todays_card #.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
+        @todays_card.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
       when "exit"
         puts "Goodbye"
       else
