@@ -1,6 +1,6 @@
 class Recipe
 
-  attr_accessor :name, :url
+  attr_accessor :name, :url, :ingredients, :directions
 
   @@recipes = []
 
@@ -8,6 +8,8 @@ class Recipe
   def initialize(name = nil, url = nil)
     @name = name
     @url = url
+    @ingredients = []
+    @directions = []
   end
 
   #scrape website and return array of recipes
@@ -27,6 +29,18 @@ class Recipe
     @@recipes.sample
   end
 
+
+
+#__________________________________________
+
+
+  def get_recipe
+    doc2 = Nokogiri::HTML(open(self.url))
+
+    doc2.css("div.tasty-recipes-ingredients ul li").each {|item| @ingredients << item.text}
+    doc2.css("div.tasty-recipes-instructions ol li").each {|step| @directions << step.text}
+
+  end
 
 
 end

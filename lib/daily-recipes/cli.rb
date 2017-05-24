@@ -30,14 +30,14 @@ class DailyRecipe
       puts "Select 'recipe' or 'exit'"
       input = gets.strip.downcase
       case input
-        #change back AG
+        #change back ALG
       when "r"
-        puts "#{@todays_card}"
-        binding.pry
+        @todays_meal.get_recipe
+        puts "#{@todays_meal.name}"
         puts "Ingredients:"
-        @todays_card.ingredients.each {|ingredient| puts "-#{ingredient}"}
+        @todays_meal.ingredients.each {|ingredient| puts "-#{ingredient}"}
         puts "Directions:"
-        @todays_card.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
+        @todays_meal.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
       when "exit"
         puts "Goodbye"
       else
