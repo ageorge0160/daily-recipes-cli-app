@@ -5,9 +5,8 @@ class Recipe
   @@recipes = []
 
   #create new recipe instance
-  def initialize(name = nil, description = nil, url = nil)
+  def initialize(name = nil, url = nil)
     @name = name
-    @description = description
     @url = url
   end
 

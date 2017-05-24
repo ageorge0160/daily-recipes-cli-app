@@ -27,11 +27,13 @@ class DailyRecipe
   def show_recipe_card
     input = nil
     while input != "exit"
-      puts "Select 'recipe card' or 'exit'"
+      puts "Select 'recipe' or 'exit'"
       input = gets.strip.downcase
       case input
-      when "recipe card"
-        puts "#{@todays_card.name}"
+        #change back AG
+      when "r"
+        puts "#{@todays_card}"
+        binding.pry
         puts "Ingredients:"
         @todays_card.ingredients.each {|ingredient| puts "-#{ingredient}"}
         puts "Directions:"
@@ -41,7 +43,6 @@ class DailyRecipe
       else
         puts "Please try again"
       end
-binding.pry
     end
   end
 
