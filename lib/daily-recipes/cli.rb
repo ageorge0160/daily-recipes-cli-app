@@ -13,6 +13,7 @@ class DailyRecipe
 
     puts "-------------- Meal of the day: --------------"
     puts "#{@todays_meal.name}"
+    puts "----------------------------------------------"
     puts ""
   end
 
@@ -30,14 +31,16 @@ class DailyRecipe
       puts "Select 'recipe' or 'exit'"
       input = gets.strip.downcase
       case input
-        #change back ALG
-      when "r"
+      when "recipe"
         @todays_meal.get_recipe
-        puts "#{@todays_meal.name}"
+        # puts "#{@todays_meal.name}"
+        puts "----------------------------------------------"
         puts "Ingredients:"
         @todays_meal.ingredients.each {|ingredient| puts "-#{ingredient}"}
+        puts ""
         puts "Directions:"
         @todays_meal.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
+        puts "----------------------------------------------"
       when "exit"
         puts "Goodbye"
       else
