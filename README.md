@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To open gem use:
+
+At open the title of a recipe will be delivered as the recipe of the day. If you would like the full recipe for the meal type "recipe", or if you are not interested in the meal you may end the program with "exit".
+
 
 ## Development
 
@@ -28,7 +31,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<ageorge0160>/daily-recipes.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ageorge0160/daily-recipes-cli-app.
 
 
 ## License

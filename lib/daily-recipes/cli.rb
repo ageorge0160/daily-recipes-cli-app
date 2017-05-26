@@ -33,7 +33,6 @@ class DailyRecipe
       case input
       when "recipe"
         @todays_meal.get_recipe
-        # puts "#{@todays_meal.name}"
         puts "----------------------------------------------"
         puts "Ingredients:"
         @todays_meal.ingredients.each {|ingredient| puts "-#{ingredient}"}

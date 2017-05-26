@@ -4,7 +4,6 @@ class Recipe
 
   @@recipes = []
 
-  #create new recipe instance
   def initialize(name = nil, url = nil)
     @name = name
     @url = url
@@ -12,7 +11,6 @@ class Recipe
     @directions = []
   end
 
-  #scrape website and return array of recipes
   def self.create
     doc = Nokogiri::HTML(open("http://pinchofyum.com/recipes"))
     doc.css("article.post-summary").each do |tile|
@@ -29,17 +27,11 @@ class Recipe
     @@recipes.sample
   end
 
-
-
-#__________________________________________
-
-
   def get_recipe
     doc2 = Nokogiri::HTML(open(self.url))
 
     doc2.css("div.tasty-recipes-ingredients ul li").each {|item| @ingredients << item.text}
     doc2.css("div.tasty-recipes-instructions ol li").each {|step| @directions << step.text}
-
   end
 
 

@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'daily/recipes/version'
+require 'daily-recipes/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "daily-recipes"
   spec.version       = Daily::Recipes::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["<github email address>"]
+  spec.authors       = ["Amanda George"]
+  spec.email         = ["ageorge0160@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A gem used to deliver one recipe for a daily meal}
+  spec.description   = %q{A randomly selected recipe from pinchofyum.com delivered with the option to see the recipe for a new meal each day.}
+  spec.homepage      = "https://github.com/ageorge0160/daily-recipes-cli-app"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -34,6 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_dependency "nokogiri"
-  spec.add_dependency "open-uri"
+  
 
 end
