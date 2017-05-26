@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-To open gem use:
+To run after installation:
+
+    $ daily-recipes
 
 At open the title of a recipe will be delivered as the recipe of the day. If you would like the full recipe for the meal type "recipe", or if you are not interested in the meal you may end the program with "exit".
 
