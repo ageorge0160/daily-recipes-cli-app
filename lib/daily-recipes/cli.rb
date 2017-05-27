@@ -40,5 +40,4 @@ class DailyRecipe
       end
     end
   end
-
 end
