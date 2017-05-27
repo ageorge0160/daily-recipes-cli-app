@@ -32,5 +32,4 @@ class Recipe
     doc2.css("div.tasty-recipes-ingredients ul li").each {|item| @ingredients << item.text}
     doc2.css("div.tasty-recipes-instructions ol li").each {|step| @directions << step.text}
   end
-
 end

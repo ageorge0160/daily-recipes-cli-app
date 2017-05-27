@@ -34,7 +34,7 @@ class DailyRecipe
         @todays_meal.ingredients.each {|ingredient| puts "-#{ingredient}"}
         puts ""
         puts "Directions:"
-        @todays_meal.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}"}
+        @todays_meal.directions.each_with_index {|step, index| puts "#{index + 1}. #{step}\n\n"}
         puts "----------------------------------------------"
       when "exit"
         puts "Goodbye"
