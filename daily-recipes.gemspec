@@ -5,7 +5,7 @@ require 'daily-recipes/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "daily-recipes"
-  spec.version       = DailyRecipes::Recipes::VERSION
+  spec.version       = Daily::Recipes::VERSION
   spec.authors       = ["Amanda George"]
   spec.email         = ["ageorge0160@gmail.com"]
 
