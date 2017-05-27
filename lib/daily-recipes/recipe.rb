@@ -19,7 +19,6 @@ class Recipe
       recipe.url = tile.css(".block-link").attribute("href").value
       @@recipes << recipe
     end
-    @@recipes
   end
 
   def self.today
@@ -33,6 +32,5 @@ class Recipe
     doc2.css("div.tasty-recipes-ingredients ul li").each {|item| @ingredients << item.text}
     doc2.css("div.tasty-recipes-instructions ol li").each {|step| @directions << step.text}
   end
-
 
 end

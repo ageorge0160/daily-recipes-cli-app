@@ -9,20 +9,15 @@ class DailyRecipe
     show_recipe_card
   end
 
-  def list_daily_meal
-
-    puts "-------------- Meal of the day: --------------"
-    puts "#{@todays_meal.name}"
-    puts "----------------------------------------------"
-    puts ""
-  end
-
   def todays_meal
     @todays_meal = Recipe.today
   end
 
-  def todays_card
-    @todays_card = Card.create(@todays_meal.url)
+  def list_daily_meal
+    puts "-------------- Meal of the day: --------------"
+    puts "#{@todays_meal.name}"
+    puts "----------------------------------------------"
+    puts ""
   end
 
   def show_recipe_card
@@ -30,6 +25,7 @@ class DailyRecipe
     while input != "exit"
       puts "Select 'recipe' or 'exit'"
       input = gets.strip.downcase
+
       case input
       when "recipe"
         @todays_meal.get_recipe
@@ -47,6 +43,5 @@ class DailyRecipe
       end
     end
   end
-
 
 end
