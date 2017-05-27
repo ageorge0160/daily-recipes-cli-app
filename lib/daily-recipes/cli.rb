@@ -1,7 +1,4 @@
-class DailyRecipe
-
-  def initialize
-  end
+class DailyRecipes
 
   def call
     todays_meal

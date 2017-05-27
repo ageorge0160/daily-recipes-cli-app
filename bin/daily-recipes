@@ -3,4 +3,4 @@
 
 require './lib/daily-recipes'
 
-DailyRecipe.new.call
+DailyRecipes.new.call
