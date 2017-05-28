@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 
-require './lib/daily-recipes'
+require './lib/daily_recipes'
 
 DailyRecipe.new.call

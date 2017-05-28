@@ -1,4 +1,4 @@
-class DailyRecipe
+class DailyRecipes
 
   def call
     todays_meal

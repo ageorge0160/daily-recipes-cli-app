@@ -1,5 +1,3 @@
-module Daily
-  module Recipes
+module DailyRecipes
     VERSION = "0.1.0"
-  end
 end

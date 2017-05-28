@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "daily/recipes"
+require "daily_recipes"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

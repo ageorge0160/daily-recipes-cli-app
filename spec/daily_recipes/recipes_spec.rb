@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Daily::Recipes do
+RSpec.describe DailyRecipes do
   it "has a version number" do
-    expect(Daily::Recipes::VERSION).not_to be nil
+    expect(DailyRecipes::VERSION).not_to be nil
   end
 
   it "does something useful" do
