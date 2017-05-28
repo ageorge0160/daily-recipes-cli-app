@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'daily-recipes/version'
+require 'daily_recipes/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "daily-recipes"
+  spec.name          = "daily_recipes"
   spec.version       = DailyRecipes::VERSION
   spec.authors       = ["Amanda George"]
   spec.email         = ["ageorge0160@gmail.com"]
