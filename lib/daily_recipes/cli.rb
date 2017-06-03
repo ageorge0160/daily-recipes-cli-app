@@ -9,7 +9,6 @@ class DailyRecipe
 
   def todays_meal
     @todays_meal = Recipe.all.sample
-    Scraper.get_recipe(@todays_meal.url)
   end
 
   def list_daily_meal
