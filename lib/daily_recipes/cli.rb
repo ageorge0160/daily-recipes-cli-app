@@ -1,13 +1,15 @@
 class DailyRecipe
 
   def call
+    Scraper.scrape_recipes
     todays_meal
     list_daily_meal
     show_recipe_card
   end
 
   def todays_meal
-    @todays_meal = Recipe.today
+    @todays_meal = Recipe.all.sample
+    Scraper.get_recipe(@todays_meal.url)
   end
 
   def list_daily_meal
